@@ -1,0 +1,112 @@
+---
+title: "Priced Out"
+format:
+  html:
+    page-layout: full
+---
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">A Data-Driven Narrative · Washington, D.C.</div>
+    <h1>Priced <span>Out</span></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">
+      How rising rents are rewriting the map of Washington, D.C. — neighborhood by neighborhood, family by family.
+    </p>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">+<span>87</span>%</div>
+        <div class="stat-label">Avg. rent increase in gentrifying ZIPs since 2010</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num"><span>−18</span>pp</div>
+        <div class="stat-label">Decline in Black pop. share in Shaw / NoMa</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num"><span>38</span>%</div>
+        <div class="stat-label">Of residents spend over 30% of income on rent</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num"><span>3.5×</span></div>
+        <div class="stat-label">Eviction spike in 2020 vs. pre-pandemic baseline</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<div class="content-section">
+  <h2>The Neighborhood You Remember Is Gone</h2>
+  <div class="section-divider"></div>
+
+  <p>
+    Walk down U Street on a Friday night. The go-go music that once rattled windows has been replaced by string lights and cocktail menus. The barbershop on the corner is now a juice bar. The congregation that held that church for sixty years recently sold to a developer. These changes feel gradual — until suddenly they don't.
+  </p>
+
+  <p>
+    Washington, D.C. has undergone one of the most dramatic urban transformations of any American city in the past two decades. Neighborhoods that were once majority-Black working-class communities have become some of the most expensive ZIP codes in the region. The data tells a story that lived experience has long known: displacement isn't a side effect of growth — it <em>is</em> the mechanism.
+  </p>
+
+  <div class="pullquote">
+    "Gentrification is not just about who moves in. It's about who can no longer afford to stay."
+    <cite>— Housing Policy Brief, Urban Institute (2022)</cite>
+  </div>
+
+  <p>
+    This project examines displacement across 18 D.C. ZIP codes from 2010 to 2023, drawing on Census American Community Survey data, Zillow rent indices, and Princeton Eviction Lab filings. The goal isn't to indict growth, but to illuminate its cost — and to ask who bears it.
+  </p>
+
+  <p>
+    <strong>Navigate the story</strong> using the sections above: follow how rents climbed, see which communities shrank, and understand how eviction acts as the final lever of displacement.
+  </p>
+</div>
+
+<!-- INFOGRAPHIC SUMMARY -->
+<div class="infographic">
+  <h2>Displacement in Five Numbers</h2>
+  <div class="infographic-subtitle">Washington, D.C. · 2010–2023</div>
+  <div class="infographic-grid">
+    <div class="info-card">
+      <div class="info-icon">🏠</div>
+      <div class="info-big">$1,847</div>
+      <div class="info-small">Median rent, 2023</div>
+      <div class="info-desc">Up from ~$990 in 2010 across all D.C. neighborhoods studied</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">📉</div>
+      <div class="info-big">−12pp</div>
+      <div class="info-small">Avg. Black pop. loss</div>
+      <div class="info-desc">In the 8 highest-gentrification ZIP codes since 2010</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">⚖️</div>
+      <div class="info-big">34%</div>
+      <div class="info-small">Severe rent burden</div>
+      <div class="info-desc">Share of households spending ≥30% of income on housing</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">📋</div>
+      <div class="info-big">5.2×</div>
+      <div class="info-small">Eviction rate gap</div>
+      <div class="info-desc">Between highest and lowest gentrification ZIP codes in 2023</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🚪</div>
+      <div class="info-big">2020</div>
+      <div class="info-small">The inflection year</div>
+      <div class="info-desc">COVID-19 caused eviction rates to spike 3.5× above baseline</div>
+    </div>
+  </div>
+</div>
+
+<!-- CLOSING -->
+<div class="closing">
+  <h2>Data Is Not Neutral</h2>
+  <p>
+    Behind every percentage point is a family that had to move. Behind every eviction filing is a story. This project is built from public data — but the story it tells is deeply human.
+  </p>
+  <p style="color: #8FA8C8; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em;">
+    DATA SOURCES: U.S. Census ACS · Zillow Research · Princeton Eviction Lab · HUD CHAS
+  </p>
+</div>

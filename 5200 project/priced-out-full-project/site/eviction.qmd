@@ -1,0 +1,72 @@
+---
+title: "The Eviction Trigger"
+format:
+  html:
+    page-layout: full
+---
+
+<div class="content-section">
+  <h2>The Eviction Trigger</h2>
+  <div class="section-divider"></div>
+
+  <p>
+    Displacement often happens quietly — a lease not renewed, a building sold to a developer, rents raised beyond reach. But eviction is displacement made visible. It is the legal apparatus through which housing insecurity becomes homelessness, and it leaves a paper trail that data can follow.
+  </p>
+
+  <p>
+    In Washington, D.C., eviction rates are not evenly distributed. They are concentrated in the same ZIP codes where rent burden is highest and where Black population share has declined most sharply. This is not a coincidence. Eviction is not merely a consequence of displacement — it is one of its primary instruments.
+  </p>
+</div>
+
+<!-- LINKED VIEW -->
+<div class="fig-wrap" style="max-width: 1100px; margin: 2rem auto;">
+  <iframe class="fig-embed" src="figures/linked_view.html" style="min-height: 500px;"></iframe>
+  <div class="fig-caption">
+    FIG. 5 — Rent burden (left) and eviction rate (right) over time for D.C.'s five most rent-burdened neighborhoods, 2010–2023. Hover either panel to compare trends. Data: Census ACS · Princeton Eviction Lab.
+  </div>
+</div>
+
+<div class="content-section">
+  <div class="pullquote">
+    In 2020, eviction filings spiked by an estimated 3.5 times the pre-pandemic baseline across the highest-burden ZIP codes — even as a federal moratorium nominally held. For many tenants, the moratorium was a legal protection they didn't know how to access.
+  </div>
+
+  <h2>2020: The Inflection Year</h2>
+  <div class="section-divider"></div>
+
+  <p>
+    COVID-19 did not create the displacement crisis in D.C. — it accelerated it. The pandemic eviction spike visible in the linked chart above reflects a fundamental brittleness in the housing situations of rent-burdened households. When income was disrupted, there was no buffer. When landlords filed, tenants often couldn't navigate the court system to assert their legal protections.
+  </p>
+
+  <p>
+    The 2020 spike also illustrates something structural: the ZIP codes that experienced the largest eviction surges were the same ones that had seen the largest rent increases over the prior decade. High-burden households had been living on the edge for years before the pandemic pushed them over it.
+  </p>
+
+  <h2>What Eviction Data Misses</h2>
+  <div class="section-divider"></div>
+
+  <p>
+    Eviction filings are an undercount of actual displacement. Many tenants leave before a formal filing — when a landlord signals they won't renew, when a "cash for keys" arrangement is offered, when the social pressure of being in arrears becomes unbearable. Princeton's Eviction Lab estimates that for every formal filing, there may be two to three "informal" displacements that never appear in the data.
+  </p>
+
+  <p>
+    This means the trends shown above — already significant — likely understate the true scale of housing displacement in Washington, D.C.
+  </p>
+
+  <p>
+    Eviction is not the end of the story. It is the moment the story becomes impossible to ignore.
+  </p>
+
+  <div class="source-tag">DATA SOURCES: Princeton Eviction Lab · U.S. Census Bureau, ACS 5-Year Estimates · D.C. Courts, Civil Division</div>
+</div>
+
+<!-- CLOSING -->
+<div class="closing">
+  <h2>What Comes Next</h2>
+  <p>
+    Displacement in D.C. is not inevitable. Cities like Minneapolis, Vienna, and Singapore have pursued housing policies that expand supply while protecting long-term residents. The question is not whether solutions exist — it is whether there is political will to pursue them. The data has done its job. The rest is up to us.
+  </p>
+  <p style="color: #8FA8C8; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em;">
+    READ NEXT → <a href="appendix.html" style="color: #F5A623; text-decoration: none;">Technical Appendix & AI Usage Log →</a>
+  </p>
+</div>

@@ -1,0 +1,201 @@
+/* ── Imports ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+/* ── Variables ───────────────────────────────────────── */
+:root {
+  --navy:   #0F1923;
+  --cream:  #F4F0E8;
+  --rust:   #E8401C;
+  --gold:   #F5A623;
+  --blue:   #1A3A5C;
+  --mid:    #8FA8C8;
+  --serif:  'Playfair Display', Georgia, serif;
+  --body:   'Source Serif 4', Georgia, serif;
+  --mono:   'IBM Plex Mono', monospace;
+}
+
+/* ── Reset & base ────────────────────────────────────── */
+body {
+  font-family: var(--body);
+  background: var(--cream);
+  color: var(--navy);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* ── Navbar ──────────────────────────────────────────── */
+.navbar {
+  background: var(--navy) !important;
+  border-bottom: 3px solid var(--rust);
+  font-family: var(--mono);
+  letter-spacing: 0.04em;
+}
+.navbar-brand { font-weight: 600; color: var(--cream) !important; font-size: 1.1rem; }
+.nav-link     { color: var(--mid) !important; font-size: 0.85rem; }
+.nav-link:hover { color: var(--gold) !important; }
+
+/* ── Hero ────────────────────────────────────────────── */
+.hero {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 7rem 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(232,64,28,0.04) 40px,
+    rgba(232,64,28,0.04) 41px
+  );
+}
+.hero-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-eyebrow {
+  font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.18em;
+  color: var(--rust); text-transform: uppercase; margin-bottom: 1.2rem;
+}
+.hero h1 {
+  font-family: var(--serif); font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900; line-height: 1.0; margin: 0 0 1rem;
+  color: var(--cream);
+}
+.hero h1 span { color: var(--rust); }
+.hero-sub {
+  font-size: 1.25rem; font-weight: 300; color: var(--mid);
+  max-width: 600px; margin: 0 0 2.5rem;
+}
+.hero-rule { width: 60px; height: 4px; background: var(--rust); margin-bottom: 2rem; }
+
+/* ── Stat cards ──────────────────────────────────────── */
+.stat-row {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  max-width: 900px; margin: 0 auto 3rem;
+}
+.stat-card {
+  flex: 1; min-width: 160px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top: 3px solid var(--rust);
+  padding: 1.5rem 1.2rem;
+  border-radius: 2px;
+}
+.stat-num {
+  font-family: var(--serif); font-size: 2.6rem; font-weight: 900;
+  color: var(--cream); line-height: 1; margin-bottom: 0.3rem;
+}
+.stat-num span { color: var(--rust); }
+.stat-label { font-family: var(--mono); font-size: 0.72rem; color: var(--mid); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ── Content sections ────────────────────────────────── */
+.content-section {
+  max-width: 780px; margin: 0 auto; padding: 4rem 2rem;
+}
+.content-section h2 {
+  font-family: var(--serif); font-size: 2.2rem; font-weight: 700;
+  color: var(--blue); margin-bottom: 0.5rem; line-height: 1.2;
+}
+.section-divider {
+  width: 50px; height: 3px; background: var(--rust); margin: 0.8rem 0 1.5rem;
+}
+.content-section p { margin-bottom: 1.4rem; }
+.content-section p:first-of-type { font-size: 1.15rem; font-weight: 400; }
+
+/* ── Pull quotes ─────────────────────────────────────── */
+.pullquote {
+  border-left: 5px solid var(--rust);
+  padding: 1rem 1.8rem;
+  margin: 2.5rem 0;
+  background: rgba(232,64,28,0.04);
+  font-family: var(--serif); font-size: 1.4rem;
+  font-style: italic; color: var(--blue);
+  line-height: 1.4;
+}
+.pullquote cite {
+  display: block; margin-top: 0.6rem;
+  font-family: var(--mono); font-size: 0.75rem;
+  font-style: normal; color: #888; letter-spacing: 0.08em;
+}
+
+/* ── Figure wrappers ─────────────────────────────────── */
+.fig-wrap {
+  max-width: 1000px; margin: 3rem auto;
+  background: white;
+  border: 1px solid #E0DACE;
+  border-top: 4px solid var(--blue);
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.fig-wrap img { width: 100%; height: auto; display: block; }
+.fig-caption {
+  font-family: var(--mono); font-size: 0.75rem;
+  color: #888; margin-top: 0.8rem; letter-spacing: 0.05em;
+}
+.fig-embed { width: 100%; border: none; min-height: 540px; display: block; }
+
+/* ── Infographic ─────────────────────────────────────── */
+.infographic {
+  background: var(--navy); color: var(--cream);
+  padding: 4rem 2rem; text-align: center;
+  margin: 4rem 0;
+}
+.infographic h2 {
+  font-family: var(--serif); font-size: 2rem; color: var(--cream);
+  margin-bottom: 0.5rem;
+}
+.infographic-subtitle {
+  font-family: var(--mono); font-size: 0.8rem; color: var(--mid);
+  letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3rem;
+}
+.infographic-grid {
+  display: flex; justify-content: center; gap: 2rem;
+  flex-wrap: wrap; max-width: 900px; margin: 0 auto;
+}
+.info-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  padding: 2rem 1.5rem;
+  min-width: 150px; flex: 1;
+  position: relative;
+}
+.info-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+.info-big {
+  font-family: var(--serif); font-size: 2.8rem; font-weight: 900;
+  color: var(--rust); line-height: 1;
+}
+.info-small {
+  font-family: var(--mono); font-size: 0.72rem; color: var(--mid);
+  letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.5rem;
+}
+.info-desc { font-size: 0.9rem; color: #AABBCC; margin-top: 0.8rem; line-height: 1.5; }
+
+/* ── Closing CTA ─────────────────────────────────────── */
+.closing {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%);
+  color: var(--cream); padding: 5rem 2rem; text-align: center;
+}
+.closing h2 { font-family: var(--serif); font-size: 2.5rem; margin-bottom: 1rem; }
+.closing p  { font-size: 1.1rem; color: var(--mid); max-width: 600px; margin: 0 auto 2rem; }
+
+/* ── Source tag ──────────────────────────────────────── */
+.source-tag {
+  font-family: var(--mono); font-size: 0.72rem; color: #999;
+  letter-spacing: 0.06em; margin-top: 0.5rem;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero { padding: 4rem 1.5rem 3rem; }
+  .stat-row { gap: 1rem; }
+  .stat-num  { font-size: 2rem; }
+  .infographic-grid { flex-direction: column; }
+}
+
+/* ── Quarto overrides ────────────────────────────────── */
+#quarto-content { padding: 0 !important; }
+.quarto-title-block { display: none; }
+main.content { padding: 0; }

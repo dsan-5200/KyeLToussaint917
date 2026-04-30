@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Priced Out"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: follow-the-rent.qmd
+        text: Follow the Rent
+      - href: who-leaves.qmd
+        text: Who Leaves
+      - href: eviction.qmd
+        text: The Eviction Trigger
+      - href: appendix.qmd
+        text: Appendix
+    right:
+      - icon: github
+        href: https://github.com
+    background: "#0F1923"
+    foreground: "#F4F0E8"
+
+format:
+  html:
+    theme: cosmo
+    css: assets/custom.css
+    toc: false
+    page-layout: full

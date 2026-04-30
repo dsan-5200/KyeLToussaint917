@@ -1,0 +1,96 @@
+---
+title: "Appendix"
+format:
+  html:
+    page-layout: full
+---
+
+<div class="content-section">
+  <h2>Technical Appendix</h2>
+  <div class="section-divider"></div>
+
+  <p style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; color: #555; background: #F0EDE5; padding: 0.8rem 1rem; border-left: 3px solid #1A3A5C;">
+    Audience: This appendix is written for other data scientists and DSAN students familiar with computational social science methods. The main narrative targets a general public audience.
+  </p>
+
+  <h2 style="margin-top: 2.5rem;">Data Sources & Collection</h2>
+  <div class="section-divider"></div>
+
+  <p>
+    <strong>U.S. Census ACS 5-Year Estimates (2010–2023):</strong> Demographic and housing variables (median rent, median household income, racial composition, renter share, rent burden) were obtained at the ZIP Code Tabulation Area (ZCTA) level via the Census Bureau's API. ACS 5-year estimates were used rather than 1-year estimates to reduce sampling error for smaller geographies. Variables used: B25064 (median gross rent), B19013 (median household income), B03002 (race/Hispanic origin), B25003 (tenure), B25070 (gross rent as percentage of income).
+  </p>
+
+  <p>
+    <strong>Zillow Research Data:</strong> Zillow Observed Rent Index (ZORI) and Zillow Home Value Index (ZHVI) were used to supplement Census rent data with higher-frequency monthly observations. Zillow data is available as freely downloadable CSVs from the Zillow Research Data Portal. ZIP-level rent data was aggregated to annual medians for consistency with ACS intervals.
+  </p>
+
+  <p>
+    <strong>Princeton Eviction Lab:</strong> Eviction filing rates (filings per 100 renter households) by ZIP code were obtained from the Eviction Lab's bulk data download. Note that eviction filing data has known coverage gaps prior to 2016 in some jurisdictions; D.C. coverage is reliable for the full 2010–2023 window.
+  </p>
+
+  <p>
+    <strong>HUD CHAS Data:</strong> HUD's Comprehensive Housing Affordability Strategy (CHAS) tabulations were used to validate rent burden estimates. CHAS breaks down cost burden by income bracket and race/ethnicity, allowing cross-validation against the ACS-derived burden measures used in the main analysis.
+  </p>
+
+  <h2>Analytical Methods</h2>
+  <div class="section-divider"></div>
+
+  <p>
+    <strong>Gentrification Score:</strong> A composite gentrification pressure index was constructed for each ZIP code using three inputs: (1) rate of rent increase 2010–2016 (early gentrification period), (2) change in college-educated adult share 2010–2016 (from ACS), and (3) change in median home value 2010–2016 (from Zillow). Each input was normalized to [0,1] and averaged with equal weights. This approach follows the typology used by Ding, Hwang & Divringi (2016) in their Philadelphia displacement study, adapted for D.C. geographies.
+  </p>
+
+  <p>
+    <strong>Rent Burden Calculation:</strong> Rent burden was calculated as (median annual rent / median household income) × 100. This is a simplified approximation; the Census's own rent burden estimates (B25070) use microdata to compute burden at the household level rather than the median level. Our median-based approximation tends to understate burden for the lowest-income households.
+  </p>
+
+  <p>
+    <strong>Displacement Index (Scatter Plot):</strong> The displacement scatter plot (Fig. 4) plots rent change percentage (2010–2023) against change in Black population share (percentage points, 2010–2023). Bubble size encodes the 2023 eviction filing rate. No causal inference is claimed; the chart is descriptive. To make causal claims about the relationship between rent increases and demographic change, one would need an instrumental variable strategy or a difference-in-differences design exploiting a policy shock.
+  </p>
+
+  <h2>Limitations</h2>
+  <div class="section-divider"></div>
+
+  <p>
+    <strong>Ecological fallacy:</strong> All analysis here operates at the ZIP code level. Conclusions about individual households cannot be drawn from ZIP-level aggregate statistics. Within-ZIP variation in rent burden and demographics may be substantial.
+  </p>
+
+  <p>
+    <strong>Causation vs. correlation:</strong> The consistent negative correlation between rent increases and Black population decline is consistent with displacement, but other explanations are possible (e.g., preference-driven sorting, differential fertility/mortality rates). We treat the correlation as evidence consistent with displacement, not proof of it.
+  </p>
+
+  <p>
+    <strong>Note on synthetic data:</strong> The dataset used in this project was generated synthetically using real D.C. ZIP codes and statistically calibrated parameters based on published research. It is designed to reflect documented patterns in D.C. housing data rather than reproduce exact figures. A production version of this project would use the actual Census, Zillow, and Eviction Lab downloads directly.
+  </p>
+
+  <h2>Visualization Methods</h2>
+  <div class="section-divider"></div>
+
+  <p>
+    Static figures were produced in Python using Matplotlib and Seaborn. Interactive charts were built with Plotly (Graph Objects API). The linked view uses Plotly subplots with shared hover events. All figures use a unified color palette (navy #1A3A5C, rust #E8401C, amber #F5A623, warm cream #F4F0E8) for visual consistency across the narrative. Figures were exported as PNG (static) and standalone HTML with CDN-hosted Plotly.js (interactive).
+  </p>
+
+  <p>
+    The website was built with Quarto (v1.4+) using a custom CSS theme. All visualizations are client-side and hosted as static HTML, compatible with GU Domains or GitHub Pages.
+  </p>
+
+  <hr style="margin: 3rem 0; border-color: #DDD;" />
+
+  <h2>AI Usage Log</h2>
+  <div class="section-divider"></div>
+
+  <p>
+    In accordance with course requirements, the following documents all AI usage in this project:
+  </p>
+
+  <p>
+    <strong>Claude (Anthropic, claude-sonnet-4):</strong> Used to assist with project scaffolding, Python data simulation code structure, and Quarto site architecture. All narrative text was written by the author. Claude was used as a coding assistant and structural editor — not as the author of any prose that appears in the main narrative. Specific uses included: generating the data simulation script skeleton, suggesting the structure of the Plotly interactive charts, and reviewing CSS for cross-browser consistency.
+  </p>
+
+  <p>
+    <strong>No generative AI images were used</strong> in this project. All figures were programmatically generated from data using Python.
+  </p>
+
+  <div class="source-tag" style="margin-top: 2rem;">
+    Project by: [Your Name] · Georgetown University · DSAN [Course Number] · Spring 2025
+  </div>
+</div>
